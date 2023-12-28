@@ -58,7 +58,7 @@ const UTR = () => {
                     setTimeout(() => {
 
                         // navigate('/deposit_records')
-                        window.location.href = `${redirectUrl}/record`
+                        window.location.href = `${redirectUrl}`
 
                     }, 3000);
                 }

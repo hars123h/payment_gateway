@@ -37,7 +37,7 @@ const UTR = () => {
                 refno,
                 recharge_value: location.amount,
                 status: 'pending',
-                user_id: localStorage.getItem('uid'),
+                user_id: location.uid,
                 mobno: userDetails.mobno,
                 time: new Date(),
                 parent_id: userDetails.parent_id,
@@ -58,7 +58,7 @@ const UTR = () => {
                     setTimeout(() => {
 
                         // navigate('/deposit_records')
-                       window.location.href = `${redirectUrl}/record`
+                        window.location.href = `${redirectUrl}/record`
 
                     }, 3000);
                 }
@@ -71,13 +71,13 @@ const UTR = () => {
     }
 
     const getUserDetails = async () => {
-        await axios.post(`${BASE_URL}/get_user`, { user_id: localStorage.getItem('uid') }).then(({ data }) => {
+        await axios.post(`${BASE_URL}/get_user`, { user_id: location.uid }).then(({ data }) => {
             if (data) {
                 setUserDetails(data);
                 // setOriginalwpwd(data.wpwd);
                 // setOriginalpwd(data.pwd);
-                localStorage.setItem('user_invite', data.user_invite);
-                localStorage.setItem('wpwd', data.wpwd);
+                // localStorage.setItem('user_invite', data.user_invite);
+                // localStorage.setItem('wpwd', data.wpwd);
 
                 return data
             } else {

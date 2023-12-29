@@ -15,7 +15,7 @@ const Appchoose = () => {
 
     return (
         <>
-            <div id="app" className="flex justify-center bd-highlight mb-3">
+            <div id="app" className="flex justify-center bd-highlight mb-3 overflow-hidden">
                 <section className="w-full">
                     <div className="card card-custom card-stretch gutter-b nb-xs" style={{ boxShadow: 'rgb(214, 223, 230) 0px 3px 14px' }}>
                         <div id="loading" className="card-header border-0 p-0">

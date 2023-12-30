@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import home from '../images/home.png';
 import logo from '../images/logo.png';
 import gpay from '../images/05_logo_gpay.6a3cb873.png';
@@ -10,8 +10,31 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Appchoose = () => {
 
     const { amount, uid } = useParams();
+    const [minutes, setMinutes] = useState(10);
+    const [seconds, setSeconds] = useState(0);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (seconds > 0) {
+                setSeconds(seconds - 1);
+            }
+
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    clearInterval(interval);
+                } else {
+                    setSeconds(59);
+                    setMinutes(minutes - 1);
+                }
+            }
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, [seconds]);
 
     return (
         <>
@@ -38,9 +61,9 @@ const Appchoose = () => {
                                                 <span></span>
                                             </div>
                                             <div>
-                                                <span id="minute" className="base-timer__label_only_time">08</span>
+                                                <span id="minute" className="base-timer__label_only_time">{minutes < 10 ? '0' + minutes : minutes}</span>
                                                 <span>:</span>
-                                                <span id="second" className="base-timer__label_only_time">50</span>
+                                                <span id="second" className="base-timer__label_only_time">{seconds < 10 ? '0' + seconds : seconds}</span>
                                             </div>
                                         </div>
                                     </div>

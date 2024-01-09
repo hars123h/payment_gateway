@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import upi from '../images/05_logo_upi.863e7765.png';
-import qr from '../images/qr.png';
+import qr from '../images/qr.jpg';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import axios from 'axios';
 import BASE_URL from '../api_url';
@@ -86,7 +86,7 @@ const QR = () => {
                                                     <div className="text-xs text-[gray]">
                                                         Click the UPI to copy
                                                     </div>
-                                                    ${amounts.upi_id}
+                                                    {amounts.upi_id}
                                                 </div>
                                             </CopyToClipboard>
                                         </div>

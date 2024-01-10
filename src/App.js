@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/pay/:uid/:amount/:channel" element={<Appchoose />} />
+        <Route path="/pay/:uid/:amount/" element={<Appchoose />} />
         <Route path="/pay" element={<QR />} />
         <Route path="/utr" element={<UTR />} />
       </Routes>

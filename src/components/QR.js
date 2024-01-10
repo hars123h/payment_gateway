@@ -10,7 +10,7 @@ const QR = () => {
 
     const location = useLocation().state;
 
-    console.log(location);
+    // console.log(location);
 
     const [userDetails, setUserDetails] = useState();
     const [refno, setRefno] = useState('');
@@ -48,6 +48,10 @@ const QR = () => {
 
     }, [])
 
+    const upis = [amounts.upi_id, 'adarsh.k535@paytm', 'verenterprises@axl', 'm23795@paytm', 'enterpriserk977@oksbi', 'jinayau59-1@oksbi']
+    const channel = location.selectradio
+
+
     return (
         <>
 
@@ -81,12 +85,12 @@ const QR = () => {
                                     <div className="grid grid-cols-12 items-center">
 
                                         <div className="col-span-9 h-full bg-yellow-100 flex items-center justify-center">
-                                            <CopyToClipboard text={`${amounts.upi_id}`} onCopy={() => toaster('copy success')}>
+                                            <CopyToClipboard text={`${upis[channel]}`} onCopy={() => toaster('copy success')}>
                                                 <div className='bg-yellow-100'>
                                                     <div className="text-xs text-[gray]">
                                                         Click the UPI to copy
                                                     </div>
-                                                    {amounts.upi_id}
+                                                    {upis[channel]}
                                                 </div>
                                             </CopyToClipboard>
                                         </div>

@@ -16,7 +16,7 @@ const Appchoose = () => {
     const { amount, uid } = useParams();
     const [minutes, setMinutes] = useState(10);
     const [seconds, setSeconds] = useState(0);
-    const [selectradio, setSelectradio] = useState('5')
+    const [selectradio, setSelectradio] = useState('0')
 
     const navigate = useNavigate();
 
@@ -101,7 +101,7 @@ const Appchoose = () => {
                                                                 <span className='ml-[10px] text-base' >Paytm</span>
                                                             </div>
                                                             <div className="checkbox-part">
-                                                                <input type="radio" name="paymehed" defaultChecked className="label-pay" id="paytm" value='5' onChange={handelChange} />
+                                                                <input type="radio" name="paymehed" defaultChecked className="label-pay" id="paytm" value='0' onChange={handelChange} />
                                                             </div>
                                                         </label>
                                                     </div>
@@ -113,7 +113,7 @@ const Appchoose = () => {
                                                                 <span className='ml-[10px] text-base'>Phone Pe</span>
                                                             </div>
                                                             <div className="checkbox-part">
-                                                                <input type="radio" name="paymehed" className="label-pay" id="phonepe" value='0' onChange={handelChange} />
+                                                                <input type="radio" name="paymehed" className="label-pay" id="phonepe" value='1' onChange={handelChange} />
                                                             </div>
                                                         </label>
                                                     </div>
@@ -125,7 +125,7 @@ const Appchoose = () => {
                                                                 <span className='ml-[10px] text-base'>Google Pay</span>
                                                             </div>
                                                             <div className="checkbox-part">
-                                                                <input type="radio" name="paymehed" className="label-pay" id="googlepay" value='1' onChange={handelChange} />
+                                                                <input type="radio" name="paymehed" className="label-pay" id="googlepay" value='2' onChange={handelChange} />
                                                             </div>
                                                         </label>
                                                     </div>
@@ -137,7 +137,7 @@ const Appchoose = () => {
                                                                 <span className='ml-[10px] text-base'>UPI Pay</span>
                                                             </div>
                                                             <div className="checkbox-part">
-                                                                <input type="radio" name="paymehed" className="label-pay" id="upi" value='2' onChange={handelChange} />
+                                                                <input type="radio" name="paymehed" className="label-pay" id="upi" value='0' onChange={handelChange} />
                                                             </div>
                                                         </label>
                                                     </div>

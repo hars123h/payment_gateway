@@ -2,7 +2,7 @@
 // const BASE_URL = 'https://lobster-app-5gysu.ondigitalocean.app/api'
 const BASE_URL = 'https://cooienunoo4ss.site/api'
 // const BASE_URL = 'http://localhost:8000/api'
-export const redirectUrl = 'https://cooienunoo4ss.site/'
+export const redirectUrl = 'https://cooienunoo4ss.site'
 // export const redirectUrl = 'http://localhost:3002'
 
 // const BASE_URL = 'https://plankton-app-lw2hd.ondigitalocean.app/api'

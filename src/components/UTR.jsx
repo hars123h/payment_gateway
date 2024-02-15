@@ -92,7 +92,7 @@ const UTR = () => {
         getUserDetails()
     }, [])
 
-    console.log(userDetails);
+    // console.log(userDetails);
 
 
     return (

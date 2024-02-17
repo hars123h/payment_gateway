@@ -39,7 +39,7 @@ const QR = () => {
             //console.log(dataRes);
             if (dataRes) {
                 // console.log(dataRes);
-                setamounts(dataRes);
+                setamounts(dataRes.data);
             }
 
         }

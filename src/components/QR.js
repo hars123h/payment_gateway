@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import upi from '../images/05_logo_upi.863e7765.png';
-import qr from '../images/newQrCode.jpeg';
+import qr from '../images/qrNew.jpeg';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import axios from 'axios';
 import BASE_URL from '../api_url';
